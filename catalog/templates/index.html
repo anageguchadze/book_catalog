@@ -10,8 +10,9 @@
     <p>List:</p>
     <ul>
         {% for book in books %}
-        <li>{{book}}</li>
+        <li><a href="{% url 'book_detail' book.title %}">{{book.title}}</a></li>
         {% endfor %}
     </ul>
+    <a href="{% url 'add_book' %}">Add New Book</a>
 </body>
 </html>
